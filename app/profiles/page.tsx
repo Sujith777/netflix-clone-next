@@ -5,7 +5,7 @@ import { authOptions } from "../api/auth/[...nextauth]/route";
 import Image from "next/image";
 import ProfileWrapper from "@/components/ProfileWrapper";
 
-export async function Profiles(req: NextRequest): Promise<any> {
+export default async function Profiles() {
   const session = await getServerSession(authOptions);
 
   return (
@@ -37,5 +37,3 @@ export async function Profiles(req: NextRequest): Promise<any> {
     </div>
   );
 }
-
-export default Profiles;
