@@ -5,9 +5,7 @@ import serverAuth from "@/lib/serverAuth";
 import MovieList from "@/components/MovieList";
 import Modal from "@/components/Modal";
 
-export default async function Home(req: NextRequest): Promise<any> {
-  await serverAuth(req);
-
+export default async function Home() {
   return (
     <main className="w-full h-full">
       <Modal />
