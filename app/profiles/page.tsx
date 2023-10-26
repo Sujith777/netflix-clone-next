@@ -1,11 +1,10 @@
 import { getServerSession } from "next-auth";
-import { NextRequest } from "next/server";
 import React from "react";
 import { authOptions } from "../api/auth/[...nextauth]/route";
 import Image from "next/image";
 import ProfileWrapper from "@/components/ProfileWrapper";
 
-export default async function Profiles() {
+async function Profiles() {
   const session = await getServerSession(authOptions);
 
   return (
@@ -37,3 +36,5 @@ export default async function Profiles() {
     </div>
   );
 }
+
+export default Profiles;
