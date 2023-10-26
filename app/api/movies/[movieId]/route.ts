@@ -10,7 +10,6 @@ async function handler(req: NextRequest, res: NextResponse) {
   try {
     await serverAuth(req);
     const movieId = req.nextUrl.pathname.split("/")[3];
-    console.log(movieId);
 
     if (!movieId || typeof movieId !== "string") {
       throw new Error("Invalid ID");
