@@ -27,7 +27,7 @@ const Auth = () => {
         callbackUrl: "/profiles",
       });
     } catch (error) {
-      console.log(error);
+      throw new Error(JSON.stringify(error));
     }
   }, [email, password]);
 
@@ -40,7 +40,7 @@ const Auth = () => {
       });
       login();
     } catch (error) {
-      console.log(error);
+      throw new Error(JSON.stringify(error));
     }
   }, [email, username, password, login]);
 
